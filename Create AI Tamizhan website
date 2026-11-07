@@ -1,0 +1,122 @@
+index.html
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Tamizhan</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b1020;
+  color: white;
+}
+header {
+  padding: 20px;
+  background: #151d32;
+  border-bottom: 1px solid #303b55;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo { font-size: 22px; font-weight: bold; }
+.logo span { color: #8b83ff; }
+main {
+  max-width: 700px;
+  margin: 55px auto;
+  padding: 20px;
+  text-align: center;
+}
+h1 { font-size: 34px; }
+h1 span { color: #9188ff; }
+.subtitle { color: #aab3c8; }
+.chatbox {
+  margin-top: 35px;
+  background: #171f34;
+  padding: 15px;
+  border-radius: 18px;
+  border: 1px solid #35415c;
+}
+textarea {
+  width: 100%;
+  height: 100px;
+  background: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 16px;
+}
+button {
+  background: #7768f7;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 13px 22px;
+  font-size: 15px;
+  cursor: pointer;
+}
+button:hover { background: #6253df; }
+#reply {
+  margin-top: 25px;
+  padding: 18px;
+  background: #171f34;
+  border-radius: 14px;
+  text-align: left;
+  color: #dce2f3;
+  min-height: 50px;
+}
+footer {
+  color: #8791a9;
+  text-align: center;
+  padding: 25px;
+  font-size: 13px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">AI <span>Tamizhan</span></div>
+  <div>🌐 தமிழ் | EN</div>
+</header>
+
+<main>
+  <h1>Welcome to <span>AI Tamizhan</span></h1>
+  <p class="subtitle">Your smart AI assistant. Ask anything!</p>
+
+  <div class="chatbox">
+    <textarea id="question" placeholder="Ask anything..."></textarea>
+    <button onclick="sendMessage()">Send Message ➤</button>
+  </div>
+
+  <div id="reply">
+    Your AI response will appear here.
+  </div>
+</main>
+
+<footer>
+  © 2026 AI Tamizhan. All rights reserved.
+</footer>
+
+<script>
+function sendMessage() {
+  const q = document.getElementById("question").value.trim();
+  const reply = document.getElementById("reply");
+
+  if (!q) {
+    reply.innerText = "Please enter your question!";
+    return;
+  }
+
+  reply.innerText =
+    "Your question: " + q +
+    "\n\nAI connection is coming soon! Stay tuned.";
+}
+</script>
+
+</body>
+</html>
